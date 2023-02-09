@@ -13,6 +13,15 @@ public class ApplicationContextBasicBeanTest {
     void findAllBeanTest(){
         String[] beanDefinitionNames=ac.getBeanDefinitionNames();
         for(String beanDefinitionName:beanDefinitionNames){
+            Object bean=ac.getBean(beanDefinitionName);
+            System.out.println("name: "+beanDefinitionName+" | object: "+bean);
+        }
+    }
+
+    @Test
+    void findApplicationBeanTest(){
+        String[] beanDefinitionNames=ac.getBeanDefinitionNames();
+        for(String beanDefinitionName:beanDefinitionNames){
             BeanDefinition beanDefinition=ac.getBeanDefinition(beanDefinitionName);
             if(beanDefinition.getRole()==BeanDefinition.ROLE_APPLICATION){
                 Object bean=ac.getBean(beanDefinitionName);
