@@ -3,7 +3,6 @@ package com.core.core.beanfind;
 import com.core.core.AutoAppConfig;
 import com.core.core.member.MemberService;
 import com.core.core.member.MemberServiceImpl;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
