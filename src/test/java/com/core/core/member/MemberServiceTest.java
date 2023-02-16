@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MemberServiceTest {
     ApplicationContext ac=new AnnotationConfigApplicationContext(AutoAppConfig.class);
-    MemberService memberService=ac.getBean("memberServiceImpl",MemberService.class);
+    MemberService memberService=ac.getBean("memberService",MemberService.class);
 
     @Test
     void join(){
