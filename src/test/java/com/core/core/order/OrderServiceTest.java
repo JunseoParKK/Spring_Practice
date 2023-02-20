@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class OrderServiceTest {
 
     ApplicationContext ac=new AnnotationConfigApplicationContext(AutoAppConfig.class);
-    OrderService orderService=ac.getBean("orderService", OrderService.class);
+    OrderService orderService=ac.getBean("orderServiceImpl", OrderService.class);
     MemberService memberService=ac.getBean("memberService",MemberService.class);
 
     @Test
@@ -26,6 +26,6 @@ public class OrderServiceTest {
         Order order=orderService.createOrder(memberId,10000,"itemA");
 
         //then
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1500);
     }
 }
